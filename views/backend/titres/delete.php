@@ -46,8 +46,8 @@ if(isset($_GET['idTit'])){
                 </div>
                 <br />
                 <div class="form-group mt-2">
-                    <a href="list.php" class="btn btn-moyen">List</a>
-                    <button type="submit" class="btn btn-fonce" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce titre ?');">
+                    <a href="list.php" class="btn btn-primary">List</a>
+                    <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce titre ?');">
                         Confirmer la suppression
                     </button>
                 </div>

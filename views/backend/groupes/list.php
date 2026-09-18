@@ -26,8 +26,8 @@ $groupes = sql_select("groupe", "*");
                             <td><?php echo($groupe['nomGp']); ?></td>
                             <td><?php echo($groupe['dtCreaGp']); ?></td>
                             <td>
-                                <a href="edit.php?idGp=<?php echo($groupe['idGp']); ?>" class="btn btn-moyen">Edit</a>
-                                <a href="delete.php?idGp=<?php echo($groupe['idGp']); ?>" class="btn btn-fonce">Delete</a>
+                                <a href="edit.php?idGp=<?php echo($groupe['idGp']); ?>" class="btn btn-warning">Edit</a>
+                                <a href="delete.php?idGp=<?php echo($groupe['idGp']); ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>

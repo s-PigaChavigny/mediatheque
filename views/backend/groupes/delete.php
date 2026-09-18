@@ -55,14 +55,14 @@ if(isset($_GET['idGp'])){
                 </div>
                 <br />
                 <div class="form-group mt-2">
-                    <a href="list.php" class="btn btn-moyen">List</a>
+                    <a href="list.php" class="btn btn-primary">List</a>
                     
                     <?php if($artistCount === 0 && $albumCount === 0): ?>
-                        <button type="submit" class="btn btn-fonce" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce mot clé ?');">
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce mot clé ?');">
                             Confirmer la suppression
                         </button>
                     <?php else: ?>
-                        <button type="button" class="btn btn-fonce" disabled>Suppression impossible</button>
+                        <button type="button" class="btn btn-danger" disabled>Suppression impossible</button>
                     <?php endif; ?>
                 </div>
             </form>
