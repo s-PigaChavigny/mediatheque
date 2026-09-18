@@ -16,6 +16,7 @@ $groupes = sql_select("groupe", "*");
                         <th>Id</th>
                         <th>Nom</th>
                         <th>Date de création</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,10 @@ $groupes = sql_select("groupe", "*");
                             <td><?php echo($groupe['idGp']); ?></td>
                             <td><?php echo($groupe['nomGp']); ?></td>
                             <td><?php echo($groupe['dtCreaGp']); ?></td>
+                            <td>
+                                <a href="edit.php?idGp=<?php echo($groupe['idGp']); ?>" class="btn btn-moyen">Edit</a>
+                                <a href="delete.php?idGp=<?php echo($groupe['idGp']); ?>" class="btn btn-fonce">Delete</a>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
