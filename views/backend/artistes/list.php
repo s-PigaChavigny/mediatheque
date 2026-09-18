@@ -9,7 +9,7 @@ $artistes = sql_select("artiste", "*");
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Artistes</h1>
+            <h1>Groupes</h1>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -20,12 +20,16 @@ $artistes = sql_select("artiste", "*");
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($artistes as $artiste){ ?>
+                    <?php foreach($artistes as $artiste) { ?>
                         <tr>
                             <td><?php echo($artiste['idArt']); ?></td>
                             <td><?php echo($artiste['idGp']); ?></td>
                             <td><?php echo($artiste['nomArt']); ?></td>
                             <td><?php echo($artiste['prenomArt']); ?></td>
+                        </tr>
+                </tbody>
+                                <a href="delete.php?idGp=<?php echo($artiste['idArt']); ?>" class="btn btn-fonce">Delete</a>
+                            </td>
                         </tr>
                     <?php } ?>
                 </tbody>
