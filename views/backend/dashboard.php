@@ -32,18 +32,18 @@ include '../../header.php';
                             <td></td>
                         </tr>
                         <tr>
-                            <td>Albums</td>
-                            <td>
-                                <a href="/views/backend/albums/list.php" class="btn btn-primary ">List</a>
-                                <a href="/views/backend/albums/create.php" class="btn btn-success ">Create</a>
-                            </td>
-                            <td></td>
-                        </tr>
-                        <tr>
                             <td>Artistes</td>
                             <td>
                                 <a href="/views/backend/artistes/list.php" class="btn btn-primary ">List</a>
                                 <a href="/views/backend/artistes/create.php" class="btn btn-success ">Create</a>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Albums</td>
+                            <td>
+                                <a href="/views/backend/albums/list.php" class="btn btn-primary ">List</a>
+                                <a href="/views/backend/albums/create.php" class="btn btn-success ">Create</a>
                             </td>
                             <td></td>
                         </tr>
