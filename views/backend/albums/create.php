@@ -24,6 +24,30 @@ include '../../../header.php';
                     <label for="nomLabelA">Nom du label</label>
                     <input id="nomLabelA" name="nomLabelA" class="form-control" type="text" />
                 </div>
+                <div class="form-group">
+                    <label for="idArt">Artiste</label>
+                    <select id="idArt" name="idArt" class="form-control">
+                        <option value="">Sélectionnez un artiste</option>
+                        <?php
+                        $artistes = sql_select("ARTISTE", "*");
+
+                        foreach($artistes as $artiste) { ?>
+                            <option value="<?php echo $artiste['idArt']; ?>"><?php echo $artiste['nomArt'] . ' ' . $artiste['prenomArt']; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="idGp">Groupe</label>
+                    <select id="idGp" name="idGp" class="form-control">
+                        <option value="">Sélectionnez un groupe</option>
+                        <?php
+                        $groupes = sql_select("GROUPE", "*");
+
+                        foreach($groupes as $groupe) { ?>
+                            <option value="<?php echo $groupe['idGp']; ?>"><?php echo $groupe['nomGp']; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
                 <br />
                 <div class="form-group mt-2">
                     <a href="list.php" class="btn btn-moyen">List</a>
