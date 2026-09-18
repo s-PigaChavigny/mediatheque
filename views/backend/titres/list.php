@@ -1,8 +1,11 @@
 <?php
 include '../../../header.php'; // contains the header and call to config.php
 
-//Load all titres from database
-$titres = sql_select("titre", "*");
+// Load titles with the name of their album
+$titres = sql_select(
+    "TITRE INNER JOIN ALBUM ON TITRE.idAlb = ALBUM.idAlb",
+    "TITRE.idTit, TITRE.nomTit, ALBUM.nomA, TITRE.dureeTit"
+);
 ?>
 
 <!-- Bootstrap default layout to display all titres in foreach -->
@@ -14,8 +17,8 @@ $titres = sql_select("titre", "*");
                 <thead>
                     <tr>
                         <th>Id Titre</th>
-                        <th>Id Album</th>
                         <th>Nom du titre</th>
+                        <th>Album</th>
                         <th>Durée du titre</th>
                     </tr>
                 </thead>
@@ -23,12 +26,12 @@ $titres = sql_select("titre", "*");
                     <?php foreach($titres as $titre) { ?>
                         <tr>
                             <td><?php echo($titre['idTit']); ?></td>
-                            <td><?php echo($titre['idAlb']); ?></td>
-                            <td><?php echo($titre['NomTit']); ?></td>
-                            <td><?php echo($titre['dureeTit']); ?></td>
-                        </tr>
-                </tbody>
-                                <a href="delete.php?idGp=<?php echo($titre['idTit']); ?>" class="btn btn-fonce">Delete</a>
+                            <td><?php echo htmlspecialchars($titre['nomTit'], ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?php echo htmlspecialchars($titre['nomA'], ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td><?php echo htmlspecialchars($titre['dureeTit'], ENT_QUOTES, 'UTF-8'); ?></td>
+                            <td>
+                                <a href="edit.php?idTit=<?php echo (int) $titre['idTit']; ?>" class="btn btn-warning">Edit</a>
+                                <a href="delete.php?idTit=<?php echo (int) $titre['idTit']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
                     <?php } ?>
