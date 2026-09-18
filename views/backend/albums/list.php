@@ -34,6 +34,7 @@ $albums = sql_select(
                             <td><?php echo ($album['dtSortieA']); ?></td>
                             <td><?php echo ($album['nomLabelA']); ?></td>
                             <td>
+                                <a href="edit.php?idAlb=<?php echo (int) $album['idAlb']; ?>" class="btn btn-warning">Edit</a>
                                 <a href="delete.php?idAlb=<?php echo (int) $album['idAlb']; ?>" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
