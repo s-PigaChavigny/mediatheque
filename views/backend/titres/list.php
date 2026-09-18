@@ -15,8 +15,8 @@ $titres = sql_select("titre", "*");
                     <tr>
                         <th>Id Titre</th>
                         <th>Id Album</th>
-                        <th>Nom titre</th>
-                        <th>Durée titre</th>
+                        <th>Nom du titre</th>
+                        <th>Durée du titre</th>
                     </tr>
                 </thead>
                 <tbody>

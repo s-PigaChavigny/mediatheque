@@ -7,7 +7,7 @@ include '../../../header.php';
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Création nouveau titre</h1>
+            <h1>Création d'un nouveau titre</h1>
         </div>
         <div class="col-md-12">
             <!-- Form to create a new statut -->
