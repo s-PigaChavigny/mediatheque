@@ -58,7 +58,7 @@ if(isset($_GET['idGp'])){
                     <a href="list.php" class="btn btn-moyen">List</a>
                     
                     <?php if($artistCount === 0 && $albumCount === 0): ?>
-                        <button type="submit" class="btn btn-fonce" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce groupe ?');">
+                        <button type="submit" class="btn btn-fonce" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce mot clé ?');">
                             Confirmer la suppression
                         </button>
                     <?php else: ?>
